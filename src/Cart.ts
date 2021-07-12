@@ -7,7 +7,8 @@ export default class Cart {
         try {
             let dictionary = {
                 "itemName": itemName,
-                "itemPrice": itemPrice
+                "itemPrice": itemPrice,
+                // "quantity": quantity
             }
             this.items.push(dictionary);
             this.totalPrice+= itemPrice;

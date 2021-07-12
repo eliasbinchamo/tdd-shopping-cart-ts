@@ -19,7 +19,29 @@ describe('Cart', () => {
     })
 });
 
+// Given I have an empty cart, when I add items, 
+// then I expect it to see an itemized list of the items along with their price and quantity.
+describe('Cart', () => {
+    test('should add items to the cart', () => {
+        const cart = new Cart();
+        cart.addItem("Soda",12);
+        expect(cart.items).toEqual([{"itemName": "Soda", "itemPrice": 12}]);
+        expect(cart.totalPrice).toEqual(12);
+    })
+});
 
+// Given I have cart with one item, 
+// when I add more of that item, then I expect to see its quantity updated on the itemized list.
+
+describe('Cart', () => {
+    test('should add items to the cart', () => {
+        const cart = new Cart();
+        cart.addItem("Soda",12);
+
+        // expect(cart.items).toEqual([{"itemName": "Soda", "itemPrice": 12}]);
+        expect(cart.totalPrice).toEqual(12);
+    })
+});
 
 
 
